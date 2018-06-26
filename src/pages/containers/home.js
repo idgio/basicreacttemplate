@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import HomeLayout from '../components/home-layout'
 import AppBar from '../components/appBar'
+import ContactForm  from './contactForm'
+import CreateRequest  from './createRequest'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import {  BrowserRouter as Router, Route } from 'react-router-dom'
 
@@ -20,11 +22,7 @@ const theme = createMuiTheme({
     },
   },
 });
-const About = () => (
-  <div>
-    <h2>Contact</h2>
-  </div>
-);
+
 
 class Home extends Component {
     state = {
@@ -52,7 +50,8 @@ class Home extends Component {
                     <AppBar />
                     <main >
                         <Route exact path="/" render={()=><HomeLayout {...this.state}  onClose={this.handleClose}  onClick={this.handleClickOpen}/>}  />
-                        <Route path="/contact" component={About} />
+                        <Route path="/contact" component={ContactForm} />
+                        <Route path="/new-request" component={CreateRequest} />
                     </main>
                 </div>
             </Router>

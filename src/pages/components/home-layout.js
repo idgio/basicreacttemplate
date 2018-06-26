@@ -16,7 +16,7 @@ import Button from '@material-ui/core/Button';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import IconButton from '@material-ui/core/IconButton';
 import InsertPhoto from '@material-ui/icons/InsertPhoto';
-
+import {   Link  } from 'react-router-dom'
 const styles = theme => ({
   root: {
     flexGrow: 1,
@@ -27,15 +27,15 @@ const styles = theme => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
     margin: 15,
-    backgroundImage: 'url(https://lh5.googleusercontent.com/VlxdeMytlJ0qd2tWJ82FM4h6X_R7QgWys_dssHVcluraiTOdubTdf-mKm2J-mvUntir2s_3XKzzlTg=w1360-h662-rw)',
+    backgroundImage: 'url(https://placeimg.com/980/320/arch/grayscale)',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundColor: '#000000',
   },
   button:{
     textAlign: 'center',
-    margin: '0 auto',
-    position: 'relative',
+    margin: '20px auto 5px',
+    width: '33%',
     display: 'flex',
   },
   rightIcon: {
@@ -117,7 +117,7 @@ function HomeLayout(props){
               <Typography variant="body1" gutterBottom>
                 For other styles and shapes that utilize rope to attach the fabric to the frame call us at <a className={classes.link} href="tel:+813-992-5143">813-992-5143</a> to talk through options.
               </Typography>
-              <Button variant="contained" size="large" color="secondary" className={classes.button}>
+              <Button  component={Link} to="/new-request" variant="contained" size="large" color="secondary" className={classes.button}>
                 Get started
                 <NavigateNext className={classes.rightIcon}/>
               </Button>

@@ -9,7 +9,7 @@ import {  BrowserRouter as Router, Route, Link  } from 'react-router-dom'
 import  createBrowserHistory from 'history/createBrowserHistory';
 
 
-const styles = {
+const styles = theme => ({
   root: {
     flexGrow: 1,
   },
@@ -20,7 +20,11 @@ const styles = {
     marginLeft: -12,
     marginRight: 20,
   },
-};
+  noTextDeco: {
+    textDecoration: 'none',
+    color: theme.palette.primary.contrastText,
+  }
+});
 
 
 
@@ -33,12 +37,9 @@ function ButtonAppBar(props) {
               <AppBar position="static" color="primary">
                 <Toolbar>
                   <Typography variant="title" color="inherit" className={classes.flex}>
-                    Awning Recover
+                    <Link to="/" className={classes.noTextDeco}>Awning Recover</Link>
                   </Typography>
                     <div>
-                      <Button component={Link} to="/">
-                        Home
-                      </Button>
                       <Button component={Link} to="/contact">
                         Contact
                       </Button>
