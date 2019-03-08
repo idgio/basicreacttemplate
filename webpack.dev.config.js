@@ -10,7 +10,7 @@ module.exports = {
   },
   devServer: {
     disableHostCheck: true, 
-    public: 'https://54196aeb770b4051b7fc4fa679b447d7.vfs.cloud9.us-east-2.amazonaws.com',
+    public: 'https://7cd312684fb54cea8e5e778a380823ce.vfs.cloud9.us-east-2.amazonaws.com',
     historyApiFallback: true,
   },
   module: {

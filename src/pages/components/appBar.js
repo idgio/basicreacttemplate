@@ -4,9 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import {  BrowserRouter as Router, Route, Link  } from 'react-router-dom'
-import  createBrowserHistory from 'history/createBrowserHistory';
+
 
 
 const styles = theme => ({
@@ -37,13 +35,9 @@ function ButtonAppBar(props) {
               <AppBar position="static" color="primary">
                 <Toolbar>
                   <Typography variant="title" color="inherit" className={classes.flex}>
-                    <Link to="/" className={classes.noTextDeco}>Awning Recover</Link>
+                    Tic Tac Toe
                   </Typography>
-                    <div>
-                      <Button component={Link} to="/contact">
-                        Contact
-                      </Button>
-                    </div>
+                    
                 </Toolbar>
               </AppBar>
             </div>
